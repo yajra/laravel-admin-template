@@ -37,7 +37,7 @@ Route::filter('auth', function()
 {
 	if ( Auth::guest() ) // If the user is not logged in
 	{
-        	return Redirect::guest('user/login');
+        	return Redirect::guest('users/login');
 	}
 });
 
@@ -59,7 +59,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('user/login/');
+	if (Auth::check()) return Redirect::to('users/login/');
 });
 
 /*
