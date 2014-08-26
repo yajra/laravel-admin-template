@@ -1,4 +1,4 @@
-#Laravel 4 Bootstrap Admin Starter Template
+#Laravel 4 Bootstrap Admin Starter Template [with Oracle DB Support]
 
 Laravel 4 Bootstrap Admin Starter Template is a sample application for beginning development with Laravel 4.
 
