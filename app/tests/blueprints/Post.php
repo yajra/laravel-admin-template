@@ -1,0 +1,19 @@
+<?php
+
+use Woodling\Woodling;
+use Carbon\Carbon;
+
+
+Woodling::seed('Post', array('class' => 'Post', 'do' => function($blueprint)
+{
+    $blueprint->slug = 'in-iisque-similique-reprimique-eum';
+    $blueprint->created_at = Carbon::now();
+    $blueprint->updated_at = Carbon::now();
+}));
+
+Woodling::seed('PostOld', array('class' => 'Post', 'do' => function($blueprint)
+{
+    $blueprint->slug = 'in-iisque-similique-reprimique-eum';
+    $blueprint->created_at = Carbon::now()->subWeeks(2);
+    $blueprint->updated_at = Carbon::now()->subWeeks(2);
+}));

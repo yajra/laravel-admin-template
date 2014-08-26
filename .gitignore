@@ -1,0 +1,26 @@
+# Laravel
+/bootstrap/compiled.php
+/vendor
+
+# Configuration
+/app/config/local
+/app/config/staging
+/app/config/production
+
+# Basset development collections
+/public/assets/compiled/public
+/public/assets/compiled/admin
+
+# Composer
+composer.phar
+#include composer.lock for production
+//composer.lock
+
+# OS
+.DS_Store
+.idea/
+vagrant
+.vagrant
+
+# Packages
+_ide_helpers.php
