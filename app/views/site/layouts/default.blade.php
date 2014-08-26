@@ -133,7 +133,7 @@
 					</div>
 					<div class="col-md-4">
 						<h3>Contribute</h3>
-						<p>You want to help us and participate in the development or the documentation? Just fork Bootflat on <a href="https://github.com/yajra/laravel-admin-template" target="_blank" rel="external nofollow">GitHub</a> and send us a pull request.</p>
+						<p>You want to help us and participate in the development or the documentation? Just fork {{ Config::get('site.name') }} on <a href="https://github.com/yajra/laravel-admin-template" target="_blank" rel="external nofollow">GitHub</a> and send us a pull request.</p>
 					</div>
 					<div class="col-md-4">
 						<h3>Found a bug?</h3>
