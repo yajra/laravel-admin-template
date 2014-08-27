@@ -103,9 +103,6 @@
 	<!-- DatePicker -->
 	<link rel="stylesheet" href="{{ asset('assets/js/datepicker/css/datepicker.css') }}">
 	<script src="{{ asset('assets/js/datepicker/js/bootstrap-datepicker.js') }}"></script>
-	<!-- Dual List Box -->
-	<link rel="stylesheet" href="{{ asset('assets/js/duallistbox/bootstrap-duallistbox.min.css') }}">
-	<script src="{{ asset('assets/js/duallistbox/jquery.bootstrap-duallistbox.min.js') }}"></script>
 
 	@yield('scripts')
 
@@ -144,11 +141,8 @@
         	format: 'yyyy-mm-dd'
         });
         // Dual List Box
-        $('.dual-listbox').bootstrapDualListbox({
-        	nonSelectedListLabel: 'Available',
-        	selectedListLabel: 'Selected',
-        	preserveSelectionOnMove: 'moved',
-        	moveOnSelect: false
+        $('.select2-multiple').select2({
+        	width: '100%'
         });
     });
 	</script>

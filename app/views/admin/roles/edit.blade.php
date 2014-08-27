@@ -33,7 +33,7 @@
 	<div class="tab-pane" id="tab-permissions">
 		<div class="form-group">
 			<div class="col-md-12">
-				<select name="permissions[]" id="permission" class="dual-listbox" multiple>
+				<select name="permissions[]" id="permission" class="select2-multiple" multiple>
 					@foreach ($permissions as $permission)
 					<option value="{{ $permission['id'] }}" {{{ (isset($permission['checked']) && $permission['checked'] == true ? ' selected="selected"' : '')}}}>{{ $permission['display_name'] }}</option>
 					@endforeach

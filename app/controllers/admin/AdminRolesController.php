@@ -92,14 +92,14 @@ class AdminRolesController extends AdminController {
         // Check if the form validates with success
         if ($validator->passes())
         {
-  	    // Get the inputs, with some exceptions
+        // Get the inputs, with some exceptions
             $inputs = Input::except('csrf_token');
 
             $this->role->name = $inputs['name'];
             $this->role->save();
 
             // Save permissions
-            $this->role->perms()->sync($this->permission->preparePermissionsForSave($inputs['permissions']));
+            $this->role->savePermissions($inputs['permissions']);
 
             // Was the role created?
             if ($this->role->id)
@@ -176,7 +176,7 @@ class AdminRolesController extends AdminController {
         {
             // Update the role data
             $role->name        = Input::get('name');
-            $role->perms()->sync($this->permission->preparePermissionsForSave(Input::get('permissions')));
+            $role->savePermissions(Input::get('permissions'));
 
             // Was the role updated?
             if ($role->save())
