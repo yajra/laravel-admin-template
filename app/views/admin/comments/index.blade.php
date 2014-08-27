@@ -9,7 +9,9 @@
 @section('content')
 <div class="box box-primary">
 	<div class="box-header">
-		<div class="pull-right box-tools"></div>
+		<div class="pull-right box-tools">
+			<a href="#" onClick="oTable.fnReloadAjax()" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></a>
+		</div>
 		<i class="fa fa-comments"></i>
 		<h3 class="box-title">Comments</h3>
 	</div>
