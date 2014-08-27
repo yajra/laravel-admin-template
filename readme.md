@@ -18,7 +18,6 @@ Laravel 4 Bootstrap Admin Starter Template is a sample application for beginning
     * [DataTables](https://github.com/DataTables/DataTables) dynamic table sorting and filtering.
     * [Colorbox](https://github.com/jackmoore/colorbox) Lightbox jQuery modal popup.
     * [Select 2](https://github.com/ivaynberg/select2) jQuery-based replacement for select boxes
-    * [Bootstrap Dual Listbox](https://github.com/istvan-ujjmeszaros/bootstrap-duallistbox) responsive dual listbox widget optimized for Twitter Bootstrap
     * [Bootstrap Datepicker](http://www.eyecon.ro/bootstrap-datepicker)
 * Front-end
 	* [Bootflat](https://github.com/flathemes/bootflat) Flat UI KIT Template
