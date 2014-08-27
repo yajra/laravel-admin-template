@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'laravel',
 			'username'  => 'root',
-			'password'  => '4482',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -76,8 +76,8 @@ return array(
 
 		'sqlsrv' => array(
 			'driver'   => 'sqlsrv',
-			'host'     => '10.0.0.101',
-			'database' => 'accpac',
+			'host'     => 'localhost',
+			'database' => 'sqlserver',
 			'username' => 'sa',
 			'password' => '1234',
 			'prefix'   => '',
@@ -85,10 +85,10 @@ return array(
 
 		'oracle' => array(
 			'driver'   => 'oracle',
-			'host'     => 'oracle.host',
+			'host'     => 'localhost',
 			'database' => 'xe',
-			'username' => 'starter',
-			'password' => 'starter',
+			'username' => 'laravel',
+			'password' => 'laravel',
 			'prefix'   => '',
 		),
 
