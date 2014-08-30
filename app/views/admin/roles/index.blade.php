@@ -21,11 +21,11 @@
 		<table id="roles" class="table table-striped table-hover table-bordered">
 			<thead>
 				<tr>
-					<th class="col-md-6">{{{ Lang::get('admin/roles/table.name') }}}</th>
-					<th class="col-md-1">{{{ Lang::get('admin/roles/table.users') }}}</th>
+					<th class="col-md-4">{{{ Lang::get('admin/roles/table.name') }}}</th>
+					<th class="col-md-2">{{{ Lang::get('admin/roles/table.users') }}}</th>
 					<th class="col-md-2">{{{ Lang::get('admin/roles/table.created_at') }}}</th>
 					<th class="col-md-2">{{{ Lang::get('admin/roles/table.updated_at') }}}</th>
-					<th width="80px">{{{ Lang::get('table.actions') }}}</th>
+					<th class="col-md-2">{{{ Lang::get('table.actions') }}}</th>
 				</tr>
 			</thead>
 		</table>
