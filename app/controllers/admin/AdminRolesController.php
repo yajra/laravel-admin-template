@@ -81,11 +81,10 @@ class AdminRolesController extends AdminController {
      */
     public function postCreate()
     {
-
-        // Declare the rules for the form validation
         $rules = array(
-            'name' => 'required'
-        );
+            'name' => 'required|alpha_dash|unique:roles,name',
+            'permissions' => 'required',
+            );
 
         // Validate the inputs
         $validator = Validator::make(Input::all(), $rules);
@@ -163,10 +162,10 @@ class AdminRolesController extends AdminController {
      */
     public function postEdit($role)
     {
-        // Declare the rules for the form validation
         $rules = array(
-            'name' => 'required'
-        );
+            'name' => 'required|alpha_dash|unique:roles,name,' . $role->id,
+            'permissions' => 'required',
+            );
 
         // Validate the inputs
         $validator = Validator::make(Input::all(), $rules);
@@ -204,10 +203,7 @@ class AdminRolesController extends AdminController {
      */
     public function getDelete($role)
     {
-        // Title
         $title = Lang::get('admin/roles/title.role_delete');
-
-        // Show the page
         return View::make('admin/roles/delete', compact('role', 'title'));
     }
 
@@ -220,14 +216,14 @@ class AdminRolesController extends AdminController {
      */
     public function postDelete($role)
     {
-            // Was the role deleted?
-            if($role->delete()) {
-                // Redirect to the role management page
-                return Redirect::to('admin/roles')->with('success', Lang::get('admin/roles/messages.delete.success'));
-            }
+        // Was the role deleted?
+        if($role->delete()) {
+            // Redirect to the role management page
+            return Redirect::to('admin/roles')->with('success', Lang::get('admin/roles/messages.delete.success'));
+        }
 
-            // There was a problem deleting the role
-            return Redirect::to('admin/roles')->with('error', Lang::get('admin/roles/messages.delete.error'));
+        // There was a problem deleting the role
+        return Redirect::to('admin/roles')->with('error', Lang::get('admin/roles/messages.delete.error'));
     }
 
     /**
@@ -237,15 +233,16 @@ class AdminRolesController extends AdminController {
      */
     public function getData()
     {
-        $roles = Role::select(array('roles.id',  'roles.name', 'roles.id as users', 'roles.created_at'));
+        $roles = Role::select(array('roles.id',  'roles.name', 'roles.id as users', 'roles.created_at', 'roles.updated_at'));
 
         return Datatables::of($roles)
-        // ->edit_column('created_at','{{{ Carbon::now()->diffForHumans(Carbon::createFromFormat(\'Y-m-d H\', $test)) }}}')
-        ->edit_column('users', '{{{ DB::table(\'assigned_roles\')->where(\'role_id\', \'=\', $id)->count()  }}}')
+        ->edit_column('created_at', '{{ $created_at->format("Y-m-d h:i:s") }}')
+        ->edit_column('updated_at', '{{ $updated_at->format("Y-m-d h:i:s") }}')
+        ->edit_column('users', '<span class="label label-success">{{{ DB::table(\'assigned_roles\')->where(\'role_id\', \'=\', $id)->count()  }}}</span>')
         ->add_column('actions', '
             <div class="btn-group">
-            <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/edit\' ) }}}" class="iframe btn btn-xs btn-primary"><i class="fa fa-pencil"></i> {{{ Lang::get(\'button.edit\') }}}</a>
-            <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/delete\' ) }}}" class="iframe btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> {{{ Lang::get(\'button.delete\') }}}</a>
+            <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/edit\' ) }}}" class="iframe btn btn-xs btn-primary"><i class="fa fa-pencil"></i></a>
+            <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/delete\' ) }}}" class="iframe btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></a>
             </div>
             ')
         ->remove_column('id')

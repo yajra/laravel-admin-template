@@ -13,7 +13,6 @@
 			<a href="{{url('admin/roles/create')}}" class="btn btn-primary btn-sm iframe">
 				<span class="fa fa-plus-circle"></span> Create
 			</a>
-			<a href="#" onClick="oTable.fnReloadAjax()" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></a>
 		</div>
 		<i class="fa fa-user"></i>
 		<h3 class="box-title">Roles</h3>
@@ -23,13 +22,12 @@
 			<thead>
 				<tr>
 					<th class="col-md-6">{{{ Lang::get('admin/roles/table.name') }}}</th>
-					<th class="col-md-2">{{{ Lang::get('admin/roles/table.users') }}}</th>
+					<th class="col-md-1">{{{ Lang::get('admin/roles/table.users') }}}</th>
 					<th class="col-md-2">{{{ Lang::get('admin/roles/table.created_at') }}}</th>
-					<th class="col-md-2">{{{ Lang::get('table.actions') }}}</th>
+					<th class="col-md-2">{{{ Lang::get('admin/roles/table.updated_at') }}}</th>
+					<th width="80px">{{{ Lang::get('table.actions') }}}</th>
 				</tr>
 			</thead>
-			<tbody>
-			</tbody>
 		</table>
 	</div>
 </div>
@@ -38,7 +36,6 @@
 {{-- Scripts --}}
 @section('scripts')
 <script type="text/javascript">
-var oTable;
 $(document).ready(function() {
 	oTable = $('#roles').dataTable( {
 		"sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
@@ -47,7 +44,7 @@ $(document).ready(function() {
 			"sLengthMenu": "_MENU_ records per page"
 		},
 		"aoColumnDefs": [
-		{ "bSearchable": false, "bSortable": false, "aTargets": [ 3 ] }
+			{ "bSearchable": false, "bSortable": false, "aTargets": [ 4 ] }
 		],
 		"bProcessing": true,
 		"bServerSide": true,
