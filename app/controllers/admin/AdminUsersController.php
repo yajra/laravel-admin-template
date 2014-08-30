@@ -100,6 +100,9 @@ class AdminUsersController extends AdminController {
         $this->user->password_confirmation = Input::get( 'password_confirmation' );
         $this->user->confirmed = Input::get( 'confirm' );
 
+        // Generate a random confirmation code
+        $this->user->confirmation_code     = md5($this->user->username.time('U'));
+
         // Permissions are currently tied to roles. Can't do this yet.
         //$user->permissions = $user->roles()->preparePermissionsForSave(Input::get( 'permissions' ));
 
@@ -278,6 +281,7 @@ class AdminUsersController extends AdminController {
         $users = User::select(array('users.id', 'users.username','users.email',DB::raw("'roles'"), 'users.confirmed', 'users.created_at'));
 
         return Datatables::of($users)
+        ->edit_column('created_at', '{{ $created_at->format("Y-m-d h:i:s") }}')
         ->edit_column('confirmed','@if($confirmed)
             Yes
             @else
