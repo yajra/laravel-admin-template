@@ -12,7 +12,7 @@
 			<div class="col-md-12">
 				<label class="control-label" for="name">Name</label>
 				<div class="input-control">
-					{{ Form::input('text', 'name', null, ['id'=>'name','class'=>'form-control']) }}
+					{{ Form::input('text', 'name', null, ['id'=>'name','class'=>'form-control', in_array($role->name, ['admin','comment']) ? 'readonly' : '' ]) }}
 					{{ $errors->first('name', '<span class="help-block">:message</span>') }}
 				</div>
 			</div>

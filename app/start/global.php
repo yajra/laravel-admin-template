@@ -64,13 +64,13 @@ App::error(function(Exception $exception, $code)
     switch ($code)
     {
         case 403:
-            return Response::view( $admin . 'error/403', array(), 403);
+            return Response::view( $admin . 'error/403', compact('message'), 403);
 
         case 500:
-            return Response::view( $admin . 'error/500', array(), 500);
+            return Response::view( $admin . 'error/500', compact('message'), 500);
 
         default:
-            return Response::view( $admin . 'error/404', array(), $code);
+            return Response::view( $admin . 'error/404', compact('message'), $code);
     }
 });
 

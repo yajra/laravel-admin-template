@@ -203,6 +203,11 @@ class AdminRolesController extends AdminController {
      */
     public function getDelete($role)
     {
+        if ( in_array($role->name, ['admin','comment']) )
+        {
+            App::abort('403', 'Deleting of this role is not allowed!');
+        }
+
         $title = Lang::get('admin/roles/title.role_delete');
         return View::make('admin/roles/delete', compact('role', 'title'));
     }
@@ -216,6 +221,10 @@ class AdminRolesController extends AdminController {
      */
     public function postDelete($role)
     {
+        if ( in_array($role->name, ['admin','comment']) )
+        {
+            App::abort('403', 'Deleting of this role is not allowed!');
+        }
         // Was the role deleted?
         if($role->delete()) {
             // Redirect to the role management page
@@ -242,7 +251,9 @@ class AdminRolesController extends AdminController {
         ->add_column('actions', '
             <div class="btn-group">
             <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/edit\' ) }}}" class="iframe btn btn-xs btn-primary"><i class="fa fa-pencil"></i> {{ Lang::get("button.edit") }}</a>
+            @if (!in_array($name, [\'admin\',\'comment\']))
             <a href="{{{ URL::to(\'admin/roles/\' . $id . \'/delete\' ) }}}" class="iframe btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> {{ Lang::get("button.delete") }}</a>
+            @endif
             </div>
             ')
         ->remove_column('id')
