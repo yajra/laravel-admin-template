@@ -226,6 +226,7 @@ class AdminBlogsController extends AdminController {
         $posts = Post::select(array('posts.id', 'posts.title', 'posts.id as comments', 'posts.created_at'));
 
         return Datatables::of($posts)
+        ->edit_column('created_at', '{{ $created_at->format("Y-m-d h:i:s") }}')
         ->edit_column('comments', '{{ DB::table(\'comments\')->where(\'post_id\', \'=\', $id)->count() }}')
         ->add_column('actions', '
             <div class="btn-group">
