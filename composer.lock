@@ -1686,16 +1686,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v2.2.1",
+            "version": "v2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-oracle.git",
-                "reference": "91f7f1f9c8d7f970634e3107c022c90335155c68"
+                "reference": "dce5d9c441f1c306f43b8d24f4df40c5616200c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-oracle/zipball/91f7f1f9c8d7f970634e3107c022c90335155c68",
-                "reference": "91f7f1f9c8d7f970634e3107c022c90335155c68",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-oracle/zipball/dce5d9c441f1c306f43b8d24f4df40c5616200c5",
+                "reference": "dce5d9c441f1c306f43b8d24f4df40c5616200c5",
                 "shasum": ""
             },
             "require": {
@@ -1734,20 +1734,20 @@
                 "laravel",
                 "laravel4"
             ],
-            "time": "2014-08-29 09:19:32"
+            "time": "2014-09-02 05:10:03"
         },
         {
             "name": "yajra/laravel-oci8",
-            "version": "v1.5.11",
+            "version": "v1.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-oci8.git",
-                "reference": "d333bb38c0a877cd4ef15db3b0e131b9eb2f59c3"
+                "reference": "6114842c0a2397e777189db9fb0393a3050e6646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-oci8/zipball/d333bb38c0a877cd4ef15db3b0e131b9eb2f59c3",
-                "reference": "d333bb38c0a877cd4ef15db3b0e131b9eb2f59c3",
+                "url": "https://api.github.com/repos/yajra/laravel-oci8/zipball/6114842c0a2397e777189db9fb0393a3050e6646",
+                "reference": "6114842c0a2397e777189db9fb0393a3050e6646",
                 "shasum": ""
             },
             "require": {
@@ -1784,7 +1784,7 @@
                 "oracle",
                 "pdo_oci"
             ],
-            "time": "2014-08-31 14:08:18"
+            "time": "2014-09-02 02:51:23"
         },
         {
             "name": "yajra/laravel-pdo-via-oci8",
