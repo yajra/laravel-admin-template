@@ -1,8 +1,12 @@
 <?php
 
+use yajra\Oci8\Eloquent\OracleEloquent as Eloquent;
 use Illuminate\Support\Facades\URL;
 
 class Post extends Eloquent {
+
+	// define binary/blob fields used for Oracle DB
+	protected $binaries = ['content'];
 
 	/**
 	 * Deletes a blog post and all
