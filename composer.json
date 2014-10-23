@@ -1,7 +1,7 @@
 {
-    "name": "yajra/inventory",
-    "description": "Inventory Management",
-    "keywords": ["laravel", "inventory"],
+    "name": "yajra/laravel-admin-template",
+    "description": "Laravel Admin Template",
+    "keywords": ["laravel", "template"],
     "license": "MIT",
     "authors": [
         {
