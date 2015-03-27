@@ -13,8 +13,8 @@
         "laravel/framework": "~4.2",
         "zizaco/confide": "~4.0@dev",
         "zizaco/entrust": "~1.2",
-        "yajra/laravel-oci8": "~1.5",
-        "yajra/laravel-datatables-oracle": "*"
+        "yajra/laravel-oci8": "~2.0",
+        "yajra/laravel-datatables-oracle": "~3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "1.*"
