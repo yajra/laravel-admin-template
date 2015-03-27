@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration {
 			$table->integer('user_id')->unsigned()->index();
 			$table->string('title');
 			$table->string('slug');
-			$table->binary('content');
+			$table->text('content');
 			$table->string('meta_title');
 			$table->string('meta_description');
 			$table->string('meta_keywords');
