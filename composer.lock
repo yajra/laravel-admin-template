@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "fe3e926e60a9cd25a88dcacae411c1b5",
@@ -11,12 +11,12 @@
             "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mtdowling/ClassPreloader.git",
+                "url": "https://github.com/ClassPreloader/ClassPreloader.git",
                 "reference": "2c9f3bcbab329570c57339895bd11b5dd3b00877"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mtdowling/ClassPreloader/zipball/2c9f3bcbab329570c57339895bd11b5dd3b00877",
+                "url": "https://api.github.com/repos/ClassPreloader/ClassPreloader/zipball/2c9f3bcbab329570c57339895bd11b5dd3b00877",
                 "reference": "2c9f3bcbab329570c57339895bd11b5dd3b00877",
                 "shasum": ""
             },
@@ -58,12 +58,12 @@
             "version": "v1.0.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/d11wtq/boris.git",
+                "url": "https://github.com/borisrepl/boris.git",
                 "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/d11wtq/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "url": "https://api.github.com/repos/borisrepl/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
                 "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
                 "shasum": ""
             },
@@ -1711,16 +1711,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v3.4.4",
+            "version": "v3.6.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yajra/laravel-datatables-oracle.git",
-                "reference": "0439b4ea7c7841c0df594d41c180073aceca5679"
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "7d7e8a9f29724087441b07100a460395a1f91851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-oracle/zipball/0439b4ea7c7841c0df594d41c180073aceca5679",
-                "reference": "0439b4ea7c7841c0df594d41c180073aceca5679",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/7d7e8a9f29724087441b07100a460395a1f91851",
+                "reference": "7d7e8a9f29724087441b07100a460395a1f91851",
                 "shasum": ""
             },
             "require": {
@@ -1751,7 +1751,7 @@
                     "email": "aqangeles@gmail.com"
                 }
             ],
-            "description": "Server-side handler of DataTables Jquery Plugin for Laravel 4",
+            "description": "jQuery DataTables API for Laravel 4|5",
             "keywords": [
                 "datatable",
                 "datatables",
@@ -1759,7 +1759,7 @@
                 "laravel",
                 "laravel4"
             ],
-            "time": "2015-04-08 07:38:18"
+            "time": "2015-07-14 05:22:50"
         },
         {
             "name": "yajra/laravel-oci8",
@@ -1817,12 +1817,12 @@
             "version": "0.10.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yajra/laravel-pdo-via-oci8.git",
+                "url": "https://github.com/yajra/pdo-via-oci8.git",
                 "reference": "65811743ea13beaad22e0e143238c546cd0d534f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-pdo-via-oci8/zipball/65811743ea13beaad22e0e143238c546cd0d534f",
+                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/65811743ea13beaad22e0e143238c546cd0d534f",
                 "reference": "65811743ea13beaad22e0e143238c546cd0d534f",
                 "shasum": ""
             },
@@ -1858,7 +1858,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/confide/zipball/00e29fe32f47ec0fd2f34babf9d8631df57b063a",
+                "url": "https://api.github.com/repos/Zizaco/confide/zipball/a5ba244073754ab9452c841e659e2bfe7abf3288",
                 "reference": "00e29fe32f47ec0fd2f34babf9d8631df57b063a",
                 "shasum": ""
             },
