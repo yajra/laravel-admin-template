@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -199,7 +199,7 @@ return array(
         'Entrust'         => 'Zizaco\Entrust\EntrustFacade', // Entrust Alias
         'String'          => 'Andrew13\Helpers\String', // String
         'Carbon'          => 'Carbon\Carbon', // Carbon
-        'Datatables'      => 'yajra\Datatables\Datatables', // DataTables
+        'Datatables'      => 'yajra\Datatables\Facades\Datatables', // DataTables
         'Debugbar' 		  => 'Barryvdh\Debugbar\Facade', // Debugger
 
     ),
