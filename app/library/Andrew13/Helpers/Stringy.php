@@ -3,7 +3,7 @@
 use Carbon\Carbon;
 use tidy;
 
-class String {
+class Stringy {
 
     /**
      * Capatilize first letter of each word of a string.

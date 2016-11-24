@@ -8,7 +8,7 @@
 		<!-- Post Title -->
 		<div class="row">
 			<div class="col-md-8">
-				<h4><strong><a href="{{{ $post->url() }}}">{{ String::title($post->title) }}</a></strong></h4>
+				<h4><strong><a href="{{{ $post->url() }}}">{{ Stringy::title($post->title) }}</a></strong></h4>
 			</div>
 		</div>
 		<!-- ./ post title -->
@@ -20,7 +20,7 @@
 			</div>
 			<div class="col-md-10">
 				<p>
-					{{ String::tidy(Str::limit($post->content, 300)) }}
+					{{ Stringy::tidy(Str::limit($post->content, 300)) }}
 				</p>
 				<p><a class="btn btn-mini btn-default" href="{{{ $post->url() }}}">Read more</a></p>
 			</div>

@@ -62,7 +62,7 @@ class Post extends Eloquent {
             $date = $this->created_at;
         }
 
-        return String::date($date);
+        return Stringy::date($date);
     }
 
 	/**
